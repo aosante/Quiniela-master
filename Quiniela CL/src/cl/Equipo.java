@@ -5,6 +5,8 @@ import javax.swing.ImageIcon;
 
 public class Equipo {
     
+    //hola
+    
     private String nombrePais;
     private String codigoISO;
     private int ranking;
