@@ -1,6 +1,10 @@
 desktop.ini
 /Quiniela CL/nbproject/private/
 /Quiniela UI/nbproject/private/
+<<<<<<< HEAD
 /Quiniela CL/build/
 /Semana3/build/
 /Semana3/nbproject/private/
+=======
+Quiniela CL/src/cl/Equipo.java
+>>>>>>> 1cfa0328c426998bca43e81b5bc64a808b577c08
