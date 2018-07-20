@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
+   <children>
+      <SplitPane dividerPositions="0.25" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="428.0" style="-fx-background-color: rgb(71, 135, 113);" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="388.0" style="-fx-background-color: #fff;" />
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
