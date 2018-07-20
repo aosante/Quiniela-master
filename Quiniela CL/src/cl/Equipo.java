@@ -3,6 +3,8 @@ package cl;
 
 import javax.swing.ImageIcon;
 
+//hola
+
 public class Equipo {
     
     private String nombrePais;

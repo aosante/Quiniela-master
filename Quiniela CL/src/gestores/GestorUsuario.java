@@ -3,6 +3,7 @@ package gestores;
 
 import cl.Usuario;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 public class GestorUsuario extends Gestor{
@@ -12,10 +13,8 @@ public class GestorUsuario extends Gestor{
     }
     
     public boolean registrarUsuarios(String nombre, String apellidos, String correo, String nombreUsuario, String equipoFavorito, String clave, ImageIcon avatar) {
-        boolean existe = false;
-        Usuario usuario = new Usuario();
-        existe = logica.registrarUsuarios(usuario);
-        return existe;
+        Usuario usuario = new Usuario(nombre, apellidos, correo, nombreUsuario, equipoFavorito, clave, avatar);
+        return logica.registrarUsuarios(usuario);
     }
     
     public String[] listarUsuarios() throws IOException {
@@ -28,5 +27,9 @@ public class GestorUsuario extends Gestor{
     
     public void eliminarUsuario(String pNombreUsuario) {
         logica.elminarUsuario(pNombreUsuario);
+    }
+    
+    public ArrayList listaUsuarios() {
+        return logica.getListaUsuarios();
     }
 }

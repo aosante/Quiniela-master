@@ -11,14 +11,30 @@ public class CL {
     private ArrayList<Mundial> listaMundiales;
     private ArrayList<Usuario> listaUsuarios;
     
+    public CL() {
+        listaEquipos = new ArrayList();
+        listaGrupos = new ArrayList();
+        listaMundiales = new ArrayList();
+        listaUsuarios = new ArrayList();
+        
+        //esto es para tener usuarios quemados
+        Usuario usuario1 = new Usuario("Andres", "Osante Alfaro", "aosantea@ucenfotec.ac.cr", "aosante", "Croacia", "1234", null);
+        Usuario usuario2 = new Usuario("Manuela", "Brenes Jara", "mbrenesj@ucenfotec.ac.cr", "mbrenes", "Brazil", "1234", null);
+        listaUsuarios.add(usuario1);
+        listaUsuarios.add(usuario2);
+    }
+
+    public ArrayList<Usuario> getListaUsuarios() {
+        return listaUsuarios;
+    }
+    
+    
+    
     //------EQUIPOS------
     
     public boolean registrarEquipos(Equipo pEquipo) {
         boolean existe = false;
-        if(listaEquipos == null) {
-            listaEquipos = new ArrayList();
-        }
-        
+       
         if (!listaEquipos.contains(pEquipo)) {
             listaEquipos.add(pEquipo);
         }
@@ -57,10 +73,7 @@ public class CL {
     
     public boolean registrarGrupos(Grupo pGrupo) {
         boolean existe = false;
-        if(listaGrupos == null) {
-            listaGrupos = new ArrayList();
-        }
-        
+       
         if(!listaGrupos.contains(pGrupo)) {
             listaGrupos.add(pGrupo);
         } else {
@@ -101,9 +114,6 @@ public class CL {
     
     public boolean registrarMundiales(Mundial pMundial) {
         boolean existe = false;
-        if(listaMundiales == null) {
-            listaMundiales = new ArrayList();
-        }
         
         if(!listaMundiales.contains(pMundial)) {
             listaMundiales.add(pMundial);
@@ -145,9 +155,7 @@ public class CL {
     
     public boolean registrarUsuarios(Usuario pUsuario) {
         boolean existe = false;
-        if(listaUsuarios == null) {
-            listaUsuarios = new ArrayList();
-        }
+       
         
         if(!listaUsuarios.contains(pUsuario)) {
             listaUsuarios.add(pUsuario);
