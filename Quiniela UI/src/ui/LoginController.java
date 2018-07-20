@@ -38,10 +38,7 @@ public class LoginController implements Initializable {
     private TextField txtContrasena;
     @FXML
     private Label lblWarning;
-//    @FXML
-//    private Button loginBttn;
-    
-    
+      
     
 
     public void Login(ActionEvent event) throws IOException {
@@ -56,7 +53,7 @@ public class LoginController implements Initializable {
             stage.setScene(scene);
             stage.show();
         } else {
-            lblWarning.setText("Credenciales inválidas, por favor inténtelo de nuevo...");
+            lblWarning.setText("Credenciales inválidas, \n\npor favor inténtelo de nuevo...");
         }
     }
 

@@ -5,29 +5,36 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
    <children>
       <SplitPane dividerPositions="0.5" prefHeight="800.0" prefWidth="1100.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="443.0" style="-fx-background-color: rgb(71, 135, 113);" />
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="388.0" style="-fx-background-color: #fff;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="443.0" style="-fx-background-color: rgba(71, 135, 113, 0.94);" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="388.0" style="-fx-background-color: white;">
                <children>
-                  <Pane layoutX="60.0" layoutY="208.0" prefHeight="317.0" prefWidth="426.0">
+                  <VBox alignment="CENTER" layoutX="189.0" layoutY="290.0" prefHeight="202.0" prefWidth="174.0" spacing="25.0" style="-fx-background-color: #fff;">
                      <children>
-                        <TextField fx:id="txtUsuario" layoutX="139.0" layoutY="89.0" promptText="Nombre de usuario" />
-                        <PasswordField fx:id="txtContrasena" layoutX="144.0" layoutY="137.0" promptText="Contrasena" />
-                        <Button layoutX="152.0" layoutY="187.0" mnemonicParsing="false" onAction="#Login" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Iniciar sesion" textFill="WHITE">
+                        <TextField fx:id="txtUsuario" prefHeight="27.0" prefWidth="230.0" promptText="Nombre de usuario" />
+                        <PasswordField fx:id="txtContrasena" promptText="Contrasena" />
+                        <Button mnemonicParsing="false" onAction="#Login" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Iniciar sesion" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Label fx:id="lblWarning" alignment="CENTER" layoutX="9.0" layoutY="264.0" prefHeight="27.0" prefWidth="407.0" textFill="#eb0808" />
                      </children>
-                  </Pane>
+                  </VBox>
+                  <Label fx:id="lblWarning" alignment="CENTER" layoutX="121.0" layoutY="519.0" prefHeight="121.0" prefWidth="307.0" textFill="#da0000" />
+                  <ImageView fitHeight="82.0" fitWidth="79.0" layoutX="236.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/andresosante/NetBeansProjects/Quiniela-master/Quiniela%20UI/icon.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
         </items>

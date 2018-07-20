@@ -24,6 +24,7 @@ public class LoginFX extends Application {
         Scene scene = new Scene(root);
            
         stage.setScene(scene);
+        stage.setTitle("Quiniela Mundialista");
         stage.show();
     }
 
