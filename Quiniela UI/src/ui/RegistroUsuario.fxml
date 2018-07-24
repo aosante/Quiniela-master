@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RegistroUsuarioController">
+   <children>
+      <SplitPane dividerPositions="0.25" layoutX="-2.0" layoutY="-2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="1112.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="821.0" prefWidth="292.0" style="-fx-background-color: rgb(71, 135, 113);">
+               <children>
+                  <Button contentDisplay="CENTER" layoutX="42.0" layoutY="719.0" mnemonicParsing="false" onAction="#salir" prefHeight="27.0" prefWidth="190.0" style="-fx-background-color: rgb(163, 70, 67);" text="Cancelar" textFill="WHITE" />
+               </children></AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="388.0">
+               <children>
+                  <HBox layoutX="77.0" layoutY="134.0" prefHeight="539.0" prefWidth="676.0" spacing="28.0" AnchorPane.topAnchor="165.0">
+                     <children>
+                        <VBox prefHeight="539.0" prefWidth="280.0" spacing="64.0">
+                           <children>
+                              <TextField fx:id="txtNombre" prefHeight="32.0" prefWidth="465.0" promptText="Nombre" />
+                              <TextField fx:id="txtApellidos" prefHeight="32.0" prefWidth="465.0" promptText="Apellidos" />
+                              <TextField fx:id="txtCorreo" prefHeight="32.0" prefWidth="465.0" promptText="Correo electronico" />
+                              <Label fx:id="lblWarning" prefHeight="102.0" prefWidth="281.0" textFill="#cd0505" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets top="120.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="539.0" prefWidth="280.0" spacing="64.0">
+                           <children>
+                              <TextField fx:id="txtUsuario" prefHeight="32.0" prefWidth="465.0" promptText="Nombre de usuario" />
+                              <TextField fx:id="txtEquipo" prefHeight="32.0" prefWidth="465.0" promptText="Equipo favorito" />
+                              <TextField fx:id="txtClave" prefHeight="32.0" prefWidth="465.0" promptText="Clave (entre 6 -8 caracteres)" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator layoutX="-5.0" layoutY="109.0" prefHeight="0.0" prefWidth="827.0" style="-fx-background-color: #000000;" />
+                  <Button layoutX="340.0" layoutY="712.0" mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Registrarse" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
