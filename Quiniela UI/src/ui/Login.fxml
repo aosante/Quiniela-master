@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -18,18 +19,28 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="443.0" style="-fx-background-color: rgba(71, 135, 113, 0.94);" />
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="388.0" style="-fx-background-color: white;">
                <children>
-                  <VBox alignment="CENTER" layoutX="189.0" layoutY="290.0" prefHeight="202.0" prefWidth="174.0" spacing="25.0" style="-fx-background-color: #fff;">
+                  <VBox alignment="CENTER" layoutX="189.0" layoutY="290.0" prefHeight="319.0" prefWidth="174.0" spacing="25.0" style="-fx-background-color: #fff;">
                      <children>
-                        <TextField fx:id="txtUsuario" prefHeight="27.0" prefWidth="230.0" promptText="Nombre de usuario" />
-                        <PasswordField fx:id="txtContrasena" promptText="Contrasena" />
+                        <TextField fx:id="txtUsuario" onKeyReleased="#limpiar" prefHeight="27.0" prefWidth="230.0" promptText="Nombre de usuario" />
+                        <PasswordField fx:id="txtContrasena" onKeyReleased="#limpiar" promptText="Contrasena" />
                         <Button mnemonicParsing="false" onAction="#Login" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Iniciar sesion" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="154.0" text="¿No tiene cuenta?" textFill="#b2afaf">
+                           <padding>
+                              <Insets bottom="-35.0" />
+                           </padding>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Registrarse" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
                      </children>
                   </VBox>
-                  <Label fx:id="lblWarning" alignment="CENTER" layoutX="121.0" layoutY="519.0" prefHeight="121.0" prefWidth="307.0" textFill="#da0000" />
+                  <Label fx:id="lblWarning" alignment="CENTER" layoutX="120.0" layoutY="621.0" prefHeight="121.0" prefWidth="307.0" textFill="#da0000" />
                   <ImageView fitHeight="82.0" fitWidth="79.0" layoutX="236.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="file:/Users/andresosante/NetBeansProjects/Quiniela-master/Quiniela%20UI/icon.png" />
