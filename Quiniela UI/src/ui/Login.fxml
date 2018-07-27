@@ -21,8 +21,8 @@
                <children>
                   <VBox alignment="CENTER" layoutX="189.0" layoutY="290.0" prefHeight="319.0" prefWidth="174.0" spacing="25.0" style="-fx-background-color: #fff;">
                      <children>
-                        <TextField fx:id="txtUsuario" prefHeight="27.0" prefWidth="230.0" promptText="Nombre de usuario" />
-                        <PasswordField fx:id="txtContrasena" promptText="Contrasena" />
+                        <TextField fx:id="txtUsuario" onKeyReleased="#limpiar" prefHeight="27.0" prefWidth="230.0" promptText="Nombre de usuario" />
+                        <PasswordField fx:id="txtContrasena" onKeyReleased="#limpiar" promptText="Contrasena" />
                         <Button mnemonicParsing="false" onAction="#Login" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Iniciar sesion" textFill="WHITE">
                            <font>
                               <Font size="14.0" />

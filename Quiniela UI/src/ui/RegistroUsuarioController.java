@@ -18,10 +18,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javax.swing.ImageIcon;
-
-
 
 /**
  * FXML Controller class
@@ -29,9 +28,9 @@ import javax.swing.ImageIcon;
  * @author andresosante
  */
 public class RegistroUsuarioController implements Initializable {
-    
+
     static GestorUsuario gUser = new GestorUsuario();
-    
+
     @FXML
     private TextField txtNombre;
     @FXML
@@ -44,35 +43,39 @@ public class RegistroUsuarioController implements Initializable {
     private TextField txtEquipo;
     @FXML
     private TextField txtClave;
-    
+
     @FXML
     private Label lblWarning;
-    
+
     //falta validar campos vacios
     public void registrarUsuario(ActionEvent event) throws IOException {
         String nombre, apellidos, correo, nombreUsuario, equipoFavorito, clave;
         ImageIcon avatar = null;
         boolean existe = false, camposVacios = false;
-        if(txtUsuario.getText().equals("")) {
-            
-        }
+        //crear funcion en el objeto usuario de nombre registroValido()
         nombre = txtNombre.getText();
         apellidos = txtApellidos.getText();
         correo = txtCorreo.getText();
         nombreUsuario = txtUsuario.getText();
         equipoFavorito = txtEquipo.getText();
+        if (nombre.isEmpty() || apellidos.isEmpty() || nombreUsuario.isEmpty() || equipoFavorito.isEmpty()) {
+            camposVacios = true;
+        }
         clave = txtClave.getText();
-        if(clave.length() < 6 || clave.length() > 8) {
+        if (clave.length() < 6 || clave.length() > 8) {
             lblWarning.setText("ERROR: La contraseña debe tener un mínimo de 6 caracteres y un máximo de 8 caracteres.");
             return;
+        } else if (camposVacios) {
+            lblWarning.setText("ERROR: Existen campos vacíos. Por favor inténtelo de nuevo");
+            return;
         } else {
-        existe = gUser.registrarUsuarios(nombre, apellidos, correo, nombreUsuario, equipoFavorito, clave, avatar);
+            existe = gUser.registrarUsuarios(nombre, apellidos, correo, nombreUsuario, equipoFavorito, clave, avatar);
         }
-        
-        if(existe) {
+
+        if (existe) {
             lblWarning.setText("ERROR: Ya existe un usuario registrado bajo ese nombre de usuario en el sistema.");
-        } else {           
-              Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        } else {
+            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.hide();
@@ -80,17 +83,19 @@ public class RegistroUsuarioController implements Initializable {
             stage.show();
         }
     }
-    
+
     public void salir(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.hide();
-            stage.setScene(scene);
-            stage.show();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
     }
     
-    
+    public void limpiar(KeyEvent event) throws IOException {
+        lblWarning.setText("");
+    }
 
     /**
      * Initializes the controller class.
@@ -98,6 +103,6 @@ public class RegistroUsuarioController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 
@@ -38,9 +39,7 @@ public class LoginController implements Initializable {
     @FXML
     private Label lblWarning;
     
-    
    
-      
     
 
     public void Login(ActionEvent event) throws IOException {
@@ -66,6 +65,10 @@ public class LoginController implements Initializable {
             stage.setScene(scene);
             stage.show();
    }
+   
+   public void limpiar(KeyEvent event) throws IOException {
+       lblWarning.setText("");
+   } 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

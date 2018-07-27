@@ -25,9 +25,24 @@
                      <children>
                         <VBox prefHeight="539.0" prefWidth="280.0" spacing="64.0">
                            <children>
-                              <TextField fx:id="txtNombre" prefHeight="32.0" prefWidth="465.0" promptText="Nombre" />
-                              <TextField fx:id="txtApellidos" prefHeight="32.0" prefWidth="465.0" promptText="Apellidos" />
-                              <TextField fx:id="txtCorreo" prefHeight="32.0" prefWidth="465.0" promptText="Correo electronico" />
+                              <Label prefHeight="56.0" prefWidth="175.0" text="Nombre">
+                                 <VBox.margin>
+                                    <Insets bottom="-60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtNombre" minHeight="-Infinity" onKeyReleased="#limpiar" prefHeight="32.0" prefWidth="465.0" />
+                              <Label text="Apellido">
+                                 <VBox.margin>
+                                    <Insets bottom="-60.0" top="-20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtApellidos" minHeight="-Infinity" onKeyReleased="#limpiar" prefHeight="32.0" prefWidth="465.0" />
+                              <Label text="Correo electronico">
+                                 <VBox.margin>
+                                    <Insets bottom="-60.0" top="-20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtCorreo" minHeight="-Infinity" onKeyReleased="#limpiar" prefHeight="32.0" prefWidth="465.0" />
                               <Label fx:id="lblWarning" prefHeight="102.0" prefWidth="281.0" textFill="#cd0505" wrapText="true">
                                  <VBox.margin>
                                     <Insets top="120.0" />
@@ -37,13 +52,34 @@
                                  </font>
                               </Label>
                            </children>
+                           <padding>
+                              <Insets top="35.0" />
+                           </padding>
                         </VBox>
                         <VBox prefHeight="539.0" prefWidth="280.0" spacing="64.0">
                            <children>
-                              <TextField fx:id="txtUsuario" prefHeight="32.0" prefWidth="465.0" promptText="Nombre de usuario" />
-                              <TextField fx:id="txtEquipo" prefHeight="32.0" prefWidth="465.0" promptText="Equipo favorito" />
-                              <TextField fx:id="txtClave" prefHeight="32.0" prefWidth="465.0" promptText="Clave (entre 6 -8 caracteres)" />
+                              <Label text="Nombre de usuario">
+                                 <VBox.margin>
+                                    <Insets bottom="-60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtUsuario" minHeight="-Infinity" onKeyReleased="#limpiar" prefHeight="32.0" prefWidth="465.0" />
+                              <Label text="Equipo favorito">
+                                 <VBox.margin>
+                                    <Insets bottom="-60.0" top="-20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtEquipo" minHeight="-Infinity" onKeyReleased="#limpiar" prefHeight="32.0" prefWidth="465.0" />
+                              <Label text="Clave">
+                                 <VBox.margin>
+                                    <Insets bottom="-60.0" top="-20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtClave" minHeight="-Infinity" onKeyReleased="#limpiar" prefHeight="32.0" prefWidth="465.0" promptText="entre 6 -8 caracteres" />
                            </children>
+                           <padding>
+                              <Insets top="39.0" />
+                           </padding>
                         </VBox>
                      </children>
                   </HBox>
