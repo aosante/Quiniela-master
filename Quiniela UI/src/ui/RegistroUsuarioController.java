@@ -47,12 +47,13 @@ public class RegistroUsuarioController implements Initializable {
     @FXML
     private Label lblWarning;
 
-    //falta validar campos vacios
-    public void registrarUsuario(ActionEvent event) throws IOException {
-        String nombre, apellidos, correo, nombreUsuario, equipoFavorito, clave;
-        ImageIcon avatar = null;
-        boolean existe = false, camposVacios = false;
-        //crear funcion en el objeto usuario de nombre registroValido()
+    
+    public void registrarUsuario(ActionEvent event) throws Exception {
+        String nombre, apellidos, correo, nombreUsuario, clave;
+        byte[] avatar = null;
+        String equipoFavorito;
+        boolean camposVacios = false;
+        
         nombre = txtNombre.getText();
         apellidos = txtApellidos.getText();
         correo = txtCorreo.getText();
@@ -68,19 +69,17 @@ public class RegistroUsuarioController implements Initializable {
         } else if (camposVacios) {
             lblWarning.setText("ERROR: Existen campos vacíos. Por favor inténtelo de nuevo");
             return;
-        } else {
-            existe = gUser.registrarUsuarios(nombre, apellidos, correo, nombreUsuario, equipoFavorito, clave, avatar);
-        }
-
-        if (existe) {
-            lblWarning.setText("ERROR: Ya existe un usuario registrado bajo ese nombre de usuario en el sistema.");
-        } else {
-            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        } 
+        try {
+            gUser.registrarUsuarios(nombre, apellidos, correo, nombreUsuario, equipoFavorito, clave, avatar);
+             Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.hide();
             stage.setScene(scene);
             stage.show();
+        } catch(Exception e) {
+            lblWarning.setText("Ya existe un usuario registrado bajo ese nombre de usuario");
         }
     }
 
