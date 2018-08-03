@@ -5,9 +5,16 @@
  */
 package ui;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -16,9 +23,17 @@ import javafx.fxml.Initializable;
  */
 public class PrediccionesController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+ 
+    
+    public void cerrarSesion(ActionEvent event) throws IOException {
+         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.hide();
+            stage.setScene(scene);
+            stage.show();
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

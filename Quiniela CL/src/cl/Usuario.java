@@ -9,15 +9,16 @@ public class Usuario {
     private String nombre;
     private String apellidos;
     private String correo;
-    private String nombreUsuario;
-    private String equipoFavorito;
+    private String nombreUsuario; //primary key
+    private Equipo equipoFavorito;
     private String clave;
-    private ImageIcon avatar;
+    private int puntaje;
+    private byte[] avatar;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String apellidos, String correo, String nombreUsuario, String equipoFavorito, String clave, ImageIcon avatar) {
+    public Usuario(String nombre, String apellidos, String correo, String nombreUsuario, Equipo equipoFavorito, String clave, byte[] avatar) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
@@ -26,6 +27,19 @@ public class Usuario {
         this.clave = clave;
         this.avatar = avatar;
     }
+
+    public Usuario(String nombre, String apellidos, String correo, String nombreUsuario, Equipo equipoFavorito, String clave, int puntaje, byte[] avatar) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.nombreUsuario = nombreUsuario;
+        this.equipoFavorito = equipoFavorito;
+        this.clave = clave;
+        this.puntaje = puntaje;
+        this.avatar = avatar;
+    }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -43,7 +57,7 @@ public class Usuario {
         return nombreUsuario;
     }
 
-    public String getEquipoFavorito() {
+    public Equipo getEquipoFavorito() {
         return equipoFavorito;
     }
 
@@ -51,7 +65,7 @@ public class Usuario {
         return clave;
     }
 
-    public ImageIcon getAvatar() {
+    public byte[] getAvatar() {
         return avatar;
     }
 

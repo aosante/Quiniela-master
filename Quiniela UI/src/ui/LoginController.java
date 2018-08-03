@@ -5,11 +5,11 @@
  */
 package ui;
 
-import cl.Usuario;
 import gestores.GestorUsuario;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.TreeMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -42,16 +42,18 @@ public class LoginController implements Initializable {
    
     
 
-    public void Login(ActionEvent event) throws IOException {
-        Usuario user = gUser.buscarUsuario(txtUsuario.getText());
+    public void Login(ActionEvent event) throws Exception {
+        TreeMap user = gUser.buscarUsuario(txtUsuario.getText());
            
-        if (txtUsuario.getText().equals(user.getNombreUsuario()) && txtContrasena.getText().equals(user.getClave())) {
+        if (txtUsuario.getText().equals(user.get("nombreUsuario"))&& txtContrasena.getText().equals(user.get("clave"))) {
             Parent root = FXMLLoader.load(getClass().getResource("LigasUsuario.fxml"));
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.hide();
             stage.setScene(scene);
             stage.show();
+        } else if(txtUsuario.getText().equals("admin") && txtContrasena.getText().equals("admin")) {
+            //redigir a la primer vista del administrador, que es 
         } else {
             lblWarning.setText("Credenciales inválidas, \n\npor favor inténtelo de nuevo...");
         }

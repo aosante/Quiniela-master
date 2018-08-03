@@ -18,8 +18,8 @@ public class CL {
         listaUsuarios = new ArrayList();
         
         //esto es para tener usuarios quemados
-        Usuario usuario1 = new Usuario("Andres", "Osante Alfaro", "aosantea@ucenfotec.ac.cr", "aosante", "Croacia", "1234", null);
-        Usuario usuario2 = new Usuario("Manuela", "Brenes Jara", "mbrenesj@ucenfotec.ac.cr", "mbrenes", "Brazil", "1234", null);
+        Usuario usuario1 = new Usuario("Andres", "Osante Alfaro", "aosantea@ucenfotec.ac.cr", "aosante", null, "1234", null);
+        Usuario usuario2 = new Usuario("Manuela", "Brenes Jara", "mbrenesj@ucenfotec.ac.cr", "mbrenes", null, "1234", null);
         listaUsuarios.add(usuario1);
         listaUsuarios.add(usuario2);
     }

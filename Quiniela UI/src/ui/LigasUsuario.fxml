@@ -1,14 +1,901 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RegistroUsuarioController">
    <children>
-      <SplitPane dividerPositions="0.25" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0">
+      <SplitPane dividerPositions="0.25" layoutX="-2.0" layoutY="-2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="1112.0">
          <items>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="428.0" style="-fx-background-color: rgb(71, 135, 113);" />
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="388.0" style="-fx-background-color: #fff;" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="821.0" prefWidth="292.0" style="-fx-background-color: rgb(71, 135, 113);">
+               <children>
+                  <Button contentDisplay="CENTER" layoutX="42.0" layoutY="719.0" mnemonicParsing="false" onAction="#salir" prefHeight="27.0" prefWidth="190.0" style="-fx-background-color: rgb(163, 70, 67);" text="Cerrar sesion" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="388.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutY="103.0" prefHeight="707.0" prefWidth="828.0" style="-fx-border-color: white; -fx-border-width: 8;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-3" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-4" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-5" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-6" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="115.0" text="GRUPO-8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="6.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="6.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="144.0" prefWidth="413.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <children>
+                              <VBox prefHeight="144.0" prefWidth="121.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="142.0" prefWidth="80.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="7.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="81.0" spacing="7.0">
+                                 <children>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="70.0" style="-fx-border-color: black;">
+                                       <padding>
+                                          <Insets bottom="-1.0" top="-1.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="144.0" prefWidth="110.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="113.0" text="Equipo" />
+                                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="120.0" text="Equipo" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="104.0" text="Equipo" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
          </items>
       </SplitPane>
    </children>
