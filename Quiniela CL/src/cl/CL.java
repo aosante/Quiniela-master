@@ -19,7 +19,7 @@ public class CL {
         
         //esto es para tener usuarios quemados
         Usuario usuario1 = new Usuario("Andres", "Osante Alfaro", "aosantea@ucenfotec.ac.cr", "aosante", "Croacia", "1234", null);
-        Usuario usuario2 = new Usuario("Manuela", "Brenes Jara", "mbrenesj@ucenfotec.ac.cr", "mbrenes", "Brazil", "1234", null);
+        Usuario usuario2 = new Usuario("Manuel", "Brenes Jara", "mbrenesj@ucenfotec.ac.cr", "mbrenes", "Alemania", "1234", null);
         listaUsuarios.add(usuario1);
         listaUsuarios.add(usuario2);
     }
@@ -69,6 +69,21 @@ public class CL {
         }
     }
     
+    public boolean modificarEquipos(Equipo pEquipo) {
+        boolean modificado = false;
+       
+        for(Equipo data : listaEquipos){
+            data.getNombrePais().substring(0);
+        }
+        if (!listaEquipos.contains(pEquipo)) {
+            listaEquipos.add(pEquipo);
+        }
+        return modificado;
+    }
+    
+    
+    
+    
     //------GRUPOS------
     
     public boolean registrarGrupos(Grupo pGrupo) {
@@ -108,6 +123,14 @@ public class CL {
                 listaGrupos.remove(dato);
             }
         }
+    }
+    
+    public boolean asociarEquipos(Grupo pGrupo) {
+        
+        listaEquipos;
+        listaGrupos;
+                
+        
     }
     
     //------MUNDIAL------
