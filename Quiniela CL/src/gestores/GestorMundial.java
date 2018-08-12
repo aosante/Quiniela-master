@@ -28,11 +28,19 @@ public class GestorMundial extends Gestor {
         return (new MultiMundial()).listarMundiales();
     }
     
+    public void activarMundial(String anio) throws Exception {
+        (new MultiMundial()).activarMundial(anio);
+    }
+    
+    public String seleccionarMundialActivado() throws Exception {
+        return (new MultiMundial()).seleccionarMundialActivo();
+    }
+    
     public Mundial buscarMundial(String pPaisSede) {
         return logica.buscarMundial(pPaisSede);
     }
     
-    public void eliminarMundial(String pPaisSede) {
-        logica.elminarMundial(pPaisSede);
+    public void eliminarMundial(String anio) throws Exception{
+        (new MultiMundial()).eliminarMundial(anio);
     }
 }

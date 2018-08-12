@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1131.0" stylesheets="@../styles/styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="ui.RegistrarMundialController">
+<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1131.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RegistrarMundialController">
    <children>
       <SplitPane dividerPositions="0.25066430469441986" layoutX="-1.0" prefHeight="831.0" prefWidth="1131.0">
          <items>
@@ -69,7 +68,7 @@
                               </ListView>
                               <HBox prefHeight="85.0" prefWidth="322.0">
                                  <children>
-                                    <Button fx:id="activarMundial" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Activar" textFill="WHITE">
+                                    <Button fx:id="activarMundial" mnemonicParsing="false" onAction="#activarMundial" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Activar" textFill="WHITE">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
@@ -77,7 +76,7 @@
                                           <Insets right="65.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Button fx:id="eliminarMundial" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(163, 70, 67);" text="Eliminar" textFill="WHITE">
+                                    <Button fx:id="eliminarMundial" mnemonicParsing="false" onAction="#eliminarMundial" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(163, 70, 67);" text="Eliminar" textFill="WHITE">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
@@ -121,6 +120,11 @@
                                  <VBox.margin>
                                     <Insets top="35.0" />
                                  </VBox.margin>
+                              </Label>
+                              <Label fx:id="activo" prefHeight="28.0" prefWidth="163.0" textFill="#478771" translateX="137.0" translateY="130.0">
+                                 <font>
+                                    <Font name="Avenir Next Bold" size="16.0" />
+                                 </font>
                               </Label>
                               <Label prefHeight="52.0" prefWidth="154.0" text="Mundial activo:">
                                  <font>
