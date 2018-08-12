@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
    <children>
       <SplitPane dividerPositions="0.5" prefHeight="800.0" prefWidth="1100.0">
         <items>
@@ -23,10 +23,10 @@
                   <VBox alignment="CENTER" layoutX="189.0" layoutY="290.0" prefHeight="319.0" prefWidth="174.0" spacing="25.0" style="-fx-background-color: #fff;">
                      <children>
                         <TextField fx:id="txtUsuario" onKeyReleased="#limpiar" prefHeight="27.0" prefWidth="230.0" promptText="Nombre de usuario" />
-                        <PasswordField fx:id="txtContrasena" onKeyReleased="#limpiar" promptText="Contrasena" />
-                        <Button mnemonicParsing="false" onAction="#Login" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Iniciar sesion" textFill="WHITE">
+                        <PasswordField fx:id="txtContrasena" onKeyReleased="#limpiar" promptText="Contraseña" />
+                        <Button mnemonicParsing="false" onAction="#Login" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Iniciar sesión" textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font size="15.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -39,7 +39,7 @@
                         </Label>
                         <Button mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Registrarse" textFill="WHITE">
                            <font>
-                              <Font size="14.0" />
+                              <Font size="15.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />

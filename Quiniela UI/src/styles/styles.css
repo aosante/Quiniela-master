@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 3, 2018, 7:45:45 PM
+    Author     : andresosante
+*/
+
+
+.button:hover {
+    -fx-opacity: 0.8;
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+#btnMundiales {
+    -fx-background-color: rgb(71, 135, 113);
+}
+
+#btnMundiales:hover {
+    -fx-background-color: rgb(201, 226, 218);
+    -fx-text-fill: rgb(71, 135, 113);
+}
+
+
+#btnGrupos {
+    -fx-background-color: rgb(71, 135, 113);
+}
+
+#btnGrupos:hover {
+    -fx-background-color: rgb(201, 226, 218);
+    -fx-text-fill: rgb(71, 135, 113);
+}
+
+#btnEquipos {
+    -fx-background-color: rgb(71, 135, 113);
+}
+
+#btnEquipos:hover {
+    -fx-background-color: rgb(201, 226, 218);
+    -fx-text-fill: rgb(71, 135, 113);
+}
+
+#btnLigas {
+    -fx-background-color: rgb(71, 135, 113);
+}
+
+#btnLigas:hover {
+    -fx-background-color: rgb(201, 226, 218);
+    -fx-text-fill: rgb(71, 135, 113);
+}
+
+
+
