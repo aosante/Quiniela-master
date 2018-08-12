@@ -7,23 +7,40 @@ import java.util.ArrayList;
 public class Mundial {
     
     private String paisSede;
-    private LocalDate anio;
+    private int anio;
+    private String estado;
     private ArrayList<Grupo> listaGrupo;
 
     public Mundial() {
     }
-
-    public Mundial(String paisSede, LocalDate anio, ArrayList<Grupo> listaGrupo) {
+    
+    public Mundial(String paisSede, int anio) {
         this.paisSede = paisSede;
         this.anio = anio;
+    }
+
+    public Mundial(String paisSede, int anio, String estado) {
+        this.paisSede = paisSede;
+        this.anio = anio;
+        this.estado = estado;
+    }
+    
+    
+
+    public Mundial(String paisSede, int anio, String estado, ArrayList<Grupo> listaGrupo) {
+        this.paisSede = paisSede;
+        this.anio = anio;
+        this.estado = estado;
         this.listaGrupo = listaGrupo;
     }
+
+   
 
     public String getPaisSede() {
         return paisSede;
     }
 
-    public LocalDate getAnio() {
+    public int getAnio() {
         return anio;
     }
 
@@ -35,7 +52,7 @@ public class Mundial {
         this.paisSede = paisSede;
     }
 
-    public void setAnio(LocalDate anio) {
+    public void setAnio(int anio) {
         this.anio = anio;
     }
 
@@ -43,13 +60,16 @@ public class Mundial {
         this.listaGrupo = listaGrupo;
     }
 
-    @Override
-    public String toString() {
-        return "Mundial{" 
-                + "paisSede=" + paisSede 
-                + ", anio=" + anio 
-                + ", listaGrupo=" + listaGrupo 
-                + '}';
+    public String getEstado() {
+        return estado;
     }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
+    
+
+
     
 }

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1131.0" stylesheets="@../styles/styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="ui.RegistrarMundialController">
+   <children>
+      <SplitPane dividerPositions="0.25066430469441986" layoutX="-1.0" prefHeight="831.0" prefWidth="1131.0">
+         <items>
+            <AnchorPane prefHeight="829.0" prefWidth="1131.0" style="-fx-background-color: rgb(71, 135, 113);">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-9.0" layoutY="148.0" prefHeight="355.0" prefWidth="293.0" spacing="14.0">
+                     <children>
+                        <Button fx:id="btnMundiales" mnemonicParsing="false" prefHeight="35.0" prefWidth="281.0" style="-fx-background-color: rgb(201, 226, 218)rgb(201, 226, 218); -fx-scale-x: 1.1; -fx-scale-y: 1.1;" text="Mundiales" textFill="#478771">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnGrupos" mnemonicParsing="false" prefHeight="35.0" prefWidth="297.0" stylesheets="@../styles/styles.css" text="Grupos" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnEquipos" mnemonicParsing="false" prefHeight="35.0" prefWidth="297.0" stylesheets="@../styles/styles.css" text="Equipos" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnLigas" mnemonicParsing="false" prefHeight="35.0" prefWidth="293.0" stylesheets="@../styles/styles.css" text="Ligas" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Button contentDisplay="CENTER" layoutX="56.0" layoutY="739.0" mnemonicParsing="false" onAction="#salir" prefHeight="27.0" prefWidth="190.0" style="-fx-background-color: rgb(163, 70, 67);" text="Cerrar sesión" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="829.0" prefWidth="555.0">
+               <children>
+                  <Separator layoutX="-4.0" layoutY="120.0" prefHeight="3.0" prefWidth="843.0" style="-fx-background-color: #000000;" />
+                  <HBox layoutX="114.0" layoutY="169.0" prefHeight="608.0" prefWidth="679.0" AnchorPane.topAnchor="169.0">
+                     <children>
+                        <VBox prefHeight="539.0" prefWidth="322.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="194.0" text="Mundiales registrados" translateX="68.0">
+                                 <font>
+                                    <Font name="Avenir Next Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ListView fx:id="listaMundiales" prefHeight="478.0" prefWidth="266.0">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="30.0" />
+                                 </VBox.margin>
+                              </ListView>
+                              <HBox prefHeight="85.0" prefWidth="322.0">
+                                 <children>
+                                    <Button fx:id="activarMundial" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Activar" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="65.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="eliminarMundial" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(163, 70, 67);" text="Eliminar" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="539.0" prefWidth="302.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="85.0" text="País sede">
+                                 <font>
+                                    <Font name="Avenir Next Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="paisesSede" onMouseClicked="#limpiarAlerta" prefWidth="150.0" />
+                              <Label prefHeight="29.0" prefWidth="140.0" text="Año del mundial">
+                                 <font>
+                                    <Font name="Avenir Next Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="aniosMundiales" prefWidth="150.0" />
+                              <Button fx:id="registrarMundial" mnemonicParsing="false" onAction="#registrarMundial" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Registrar" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="aviso" prefHeight="44.0" prefWidth="251.0" textFill="#478771">
+                                 <font>
+                                    <Font name="Avenir Next Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="35.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="154.0" text="Mundial activo:">
+                                 <font>
+                                    <Font name="Avenir Next Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="70.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

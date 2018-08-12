@@ -1,11 +1,10 @@
 
 package gestores;
 
-import cl.Grupo;
 import cl.Mundial;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.ArrayList;
+import multis.MultiMundial;
 
 public class GestorMundial extends Gestor {
     
@@ -13,15 +12,20 @@ public class GestorMundial extends Gestor {
         
     }
     
-    public boolean registrarMundiales(String paisSede, LocalDate anio, ArrayList<Grupo> listaGrupo) {
-        boolean existe = false;
-        Mundial mundial = new Mundial();
-        existe = logica.registrarMundiales(mundial);
-        return existe;
+    public void registrarMundial(String paisSede, int anio) throws Exception{
+        (new MultiMundial()).registrarMundial(paisSede, anio);
     }
     
-    public String[] listarMundiales() throws IOException {
-        return logica.listarMundiales();
+    public ArrayList<String> listaPaises() throws Exception {
+        return (new MultiMundial()).listaPaises();
+    }
+    
+    public ArrayList<Integer> listaAnios() throws Exception {
+        return (new MultiMundial()).listaAnios();
+    }
+    
+    public ArrayList<String> listarMundiales() throws Exception {
+        return (new MultiMundial()).listarMundiales();
     }
     
     public Mundial buscarMundial(String pPaisSede) {

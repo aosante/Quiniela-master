@@ -22,7 +22,6 @@ public class LoginFX extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         
         Scene scene = new Scene(root);
-           
         stage.setScene(scene);
         stage.setTitle("Quiniela Mundialista");
         stage.show();
