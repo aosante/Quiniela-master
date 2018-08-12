@@ -121,7 +121,7 @@
                                     <Insets top="35.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label fx:id="activo" prefHeight="28.0" prefWidth="163.0" text="Hola" textFill="#478771" translateX="137.0" translateY="130.0">
+                              <Label fx:id="activo" prefHeight="28.0" prefWidth="163.0" textFill="#478771" translateX="137.0" translateY="130.0">
                                  <font>
                                     <Font name="Avenir Next Bold" size="16.0" />
                                  </font>
