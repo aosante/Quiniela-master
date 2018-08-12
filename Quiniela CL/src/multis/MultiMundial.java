@@ -83,6 +83,43 @@ public class MultiMundial {
         return listaMundiales;
     }
     
+    public void activarMundial(String anio) throws SQLException, Exception {
+        String sql1 = "UPDATE MUNDIAL SET estado = 'inactivo';";
+        String sql2 = "UPDATE MUNDIAL SET estado = 'activo' "
+                + "WHERE anio = " + anio  + ";";
+        try {
+            Conector.getConector().ejecutarSQL(sql1);
+            Conector.getConector().ejecutarSQL(sql2);
+        } catch(Exception e) {
+            throw new Exception ("El mundial no pudo ser activado");
+        }
+    }  
+    
+    public String seleccionarMundialActivo() throws SQLException, Exception {
+        String mundialActivo = "", sql;
+        sql = "SELECT * FROM MUNDIAL WHERE estado = 'activo';";
+        try {
+            ResultSet rs = null;
+            rs = Conector.getConector().ejecutarSQL(sql, true);
+            while(rs.next()) {
+                mundialActivo += rs.getString("paisSede") + "-" + rs.getInt("anio");
+            }
+        } catch(Exception e) {
+            throw new Exception("No hay mundial activo");
+        }
+        return mundialActivo;
+    }
+    
+    public void eliminarMundial(String anio) throws SQLException, Exception {
+        String sql;
+        sql = "DELETE FROM MUNDIAL WHERE anio = " + anio + ";";
+        try {
+            Conector.getConector().ejecutarSQL(sql);
+        } catch(Exception e) {
+            throw new Exception("No se pudo eliminar el mundial");
+        }
+    }
+    
 
     
 }

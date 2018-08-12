@@ -63,10 +63,12 @@ public class RegistrarMundialController implements Initializable {
     
     @FXML
     private Label aviso;
+    @FXML
+    private Label activo;
             
             
             
-    ArrayList<String> mundiales = new ArrayList();//concatenacion de ano y mundial desde la base de datos
+    ArrayList<String> mundiales = new ArrayList();//concatenacion de anio y mundial desde la base de datos
     
     
     @FXML
@@ -133,6 +135,42 @@ public class RegistrarMundialController implements Initializable {
         for(String mundial : lista) {
             listaMundiales.getItems().add(mundial);
         }
+    }
+    
+    
+    public void activarMundial() throws Exception {
+        String dato = listaMundiales.getSelectionModel().getSelectedItem().toString();
+        String partes[] = dato.split("-"); 
+        String anio = partes[1];
+        gMundial.activarMundial(anio);
+        String mundialActivo = gMundial.seleccionarMundialActivado();
+        //ahora seteo el valor del label a este string
+        activo.setText(mundialActivo);
+
+    }
+    
+    public void eliminarMundial() throws Exception {
+        String dato = listaMundiales.getSelectionModel().getSelectedItem().toString();
+        String partes[] = dato.split("-");
+        String paisSede = partes[0];
+        String anio = partes[1];
+        try {
+            gMundial.eliminarMundial(anio);
+            aviso.setText("¡Mundial eliminado con éxito!");
+            listaMundiales.getItems().remove(dato);
+            paisesSede.getItems().add(paisSede);
+            paisesSede.setValue("");
+            aniosMundiales.getItems().add(anio);
+            aniosMundiales.setValue("");
+           limpiarListView();
+            listarMundiales();
+        } catch(Exception e) {
+            throw new Exception("Ocurrió un error, inténtelo de nuevo");
+        }
+
+        
+        
+        
     }
     
     
