@@ -1,9 +1,7 @@
 package gestores;
 
-import cl.Equipo;
-import cl.Grupo;
-import java.io.IOException;
 import java.util.ArrayList;
+import multis.MultiGrupo;
 
 public class GestorGrupo extends Gestor{
     
@@ -12,23 +10,22 @@ public class GestorGrupo extends Gestor{
         
     }
     
-    public boolean registrarGrupo(String nombre, String codigo, ArrayList<Equipo> equipos) {
-        boolean existe = false;
-        Grupo group = new Grupo(nombre, codigo, equipos);
-        existe = logica.registrarGrupos(group);
-        return existe;
+    public void registrarGrupo(String nombre) throws Exception {
+       (new MultiGrupo()).registrarGrupo(nombre);
     }
     
-    public String[] listarGrupos() throws IOException {
-        return logica.listarGrupos();
+    public ArrayList<String> listaGrupos() throws Exception {
+        return (new MultiGrupo()).listaGrupos();
     }
     
-    public Grupo buscarGrupo(String pcodigo) {
-        return logica.buscarGrupo(pcodigo);
-    }
+
+//    
+//    public Grupo buscarGrupo(String pcodigo) {
+//        return logica.buscarGrupo(pcodigo);
+//    }
     
-    public void eliminarGrupo(String pcodigo) {
-        logica.elminarGrupo(pcodigo);
+    public void eliminarGrupo(String nombre) throws Exception {
+        (new MultiGrupo()).eliminarGrupo(nombre);
     }
     
 }

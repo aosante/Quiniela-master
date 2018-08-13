@@ -111,10 +111,12 @@ public class MultiMundial {
     }
     
     public void eliminarMundial(String anio) throws SQLException, Exception {
-        String sql;
+        String sql, sql2;
         sql = "DELETE FROM MUNDIAL WHERE anio = " + anio + ";";
+        sql2 = "DELETE FROM GRUPO WHERE anioMundial = " + anio + ";";
         try {
             Conector.getConector().ejecutarSQL(sql);
+            Conector.getConector().ejecutarSQL(sql2);
         } catch(Exception e) {
             throw new Exception("No se pudo eliminar el mundial");
         }

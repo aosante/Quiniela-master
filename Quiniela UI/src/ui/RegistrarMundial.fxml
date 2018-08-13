@@ -25,17 +25,17 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnGrupos" mnemonicParsing="false" prefHeight="35.0" prefWidth="297.0" stylesheets="@../styles/styles.css" text="Grupos" textFill="WHITE">
+                        <Button fx:id="btnGrupos" mnemonicParsing="false" onAction="#irAGrupos" prefHeight="35.0" prefWidth="297.0" stylesheets="@../styles/styles.css" text="Grupos" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnEquipos" mnemonicParsing="false" prefHeight="35.0" prefWidth="297.0" stylesheets="@../styles/styles.css" text="Equipos" textFill="WHITE">
+                        <Button fx:id="btnEquipos" mnemonicParsing="false" onAction="#irAEquipos" prefHeight="35.0" prefWidth="297.0" stylesheets="@../styles/styles.css" text="Equipos" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnLigas" mnemonicParsing="false" prefHeight="35.0" prefWidth="293.0" stylesheets="@../styles/styles.css" text="Ligas" textFill="WHITE">
+                        <Button fx:id="btnLigas" mnemonicParsing="false" onAction="#irALigas" prefHeight="35.0" prefWidth="293.0" stylesheets="@../styles/styles.css" text="Ligas" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -121,11 +121,6 @@
                                     <Insets top="35.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label fx:id="activo" prefHeight="28.0" prefWidth="163.0" textFill="#478771" translateX="137.0" translateY="130.0">
-                                 <font>
-                                    <Font name="Avenir Next Bold" size="16.0" />
-                                 </font>
-                              </Label>
                               <Label prefHeight="52.0" prefWidth="154.0" text="Mundial activo:">
                                  <font>
                                     <Font name="Avenir Next Bold" size="16.0" />
@@ -133,6 +128,11 @@
                                  <VBox.margin>
                                     <Insets top="70.0" />
                                  </VBox.margin>
+                              </Label>
+                              <Label fx:id="activo" prefHeight="24.0" prefWidth="135.0" textFill="#478771" translateX="140.0" translateY="-58.0">
+                                 <font>
+                                    <Font name="Avenir Next Bold" size="16.0" />
+                                 </font>
                               </Label>
                            </children>
                            <padding>

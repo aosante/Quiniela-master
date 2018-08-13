@@ -36,9 +36,6 @@ public class GestorMundial extends Gestor {
         return (new MultiMundial()).seleccionarMundialActivo();
     }
     
-    public Mundial buscarMundial(String pPaisSede) {
-        return logica.buscarMundial(pPaisSede);
-    }
     
     public void eliminarMundial(String anio) throws Exception{
         (new MultiMundial()).eliminarMundial(anio);
