@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -68,7 +70,7 @@ public class RegistrarMundialController implements Initializable {
             
             
             
-    ArrayList<String> mundiales = new ArrayList();//concatenacion de anio y mundial desde la base de datos
+   
     
     
     @FXML
@@ -144,7 +146,6 @@ public class RegistrarMundialController implements Initializable {
         String anio = partes[1];
         gMundial.activarMundial(anio);
         String mundialActivo = gMundial.seleccionarMundialActivado();
-        //ahora seteo el valor del label a este string
         activo.setText(mundialActivo);
 
     }
@@ -167,11 +168,37 @@ public class RegistrarMundialController implements Initializable {
         } catch(Exception e) {
             throw new Exception("Ocurrió un error, inténtelo de nuevo");
         }
-
-        
-        
-        
     }
+    
+    
+    //links a otras vistas
+    public void irAGrupos(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("RegistrarGrupos.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void irAEquipos(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("RegistrarEquipos.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void irALigas(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("RegistrarLigas.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
+    }
+   
     
     
     
@@ -179,10 +206,14 @@ public class RegistrarMundialController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        
         
-        mundiales.add("Italia");
-        mundiales.add("Rusia");
-        mundiales.add("Sudafrica");
-        mundiales.add("Katar");
+        String mundialActivo;
+        try {
+            mundialActivo = gMundial.seleccionarMundialActivado();
+            activo.setText(mundialActivo);
+        } catch (Exception ex) {
+            ex.getStackTrace();
+        }
+        
         
         paisesSede.getItems().addAll("Uruguay", "Italia", "Francia", "Brasil", "Suiza", "Suecia", "Chile", "Inglaterra", "México", "Alemania", "Argentina", "España", "México", "Italia", "Estados Unidos", "Francia", "Corea del Sur", "Alemania", "Sudáfrica", "Brasil", "Rusia", "Qatar" );
         paisesSede.setValue("Seleccionar");

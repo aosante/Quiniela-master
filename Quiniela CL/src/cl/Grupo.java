@@ -5,24 +5,26 @@ import java.util.ArrayList;
 
 public class Grupo {
     
+    private int codigo;
     private String nombreGrupo;
-    private String codigo;
     private ArrayList<Equipo> listaEquipos;
 
     public Grupo() {
     }
 
-    public Grupo(String nombreGrupo, String codigo, ArrayList<Equipo> listaEquipos) {
-        this.nombreGrupo = nombreGrupo;
+    public Grupo(int codigo, String nombreGrupo, ArrayList<Equipo> listaEquipos) {
         this.codigo = codigo;
+        this.nombreGrupo = nombreGrupo;
         this.listaEquipos = listaEquipos;
     }
+
+    
 
     public String getNombreGrupo() {
         return nombreGrupo;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
@@ -34,7 +36,7 @@ public class Grupo {
         this.nombreGrupo = nombreGrupo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

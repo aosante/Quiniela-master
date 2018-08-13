@@ -22,7 +22,7 @@ public class Mundial {
     public Mundial(String paisSede, int anio, String estado) {
         this.paisSede = paisSede;
         this.anio = anio;
-        this.estado = estado;
+        this.estado = "inactivo";
     }
     
     
@@ -30,7 +30,7 @@ public class Mundial {
     public Mundial(String paisSede, int anio, String estado, ArrayList<Grupo> listaGrupo) {
         this.paisSede = paisSede;
         this.anio = anio;
-        this.estado = estado;
+        this.estado = "inactivo";
         this.listaGrupo = listaGrupo;
     }
 

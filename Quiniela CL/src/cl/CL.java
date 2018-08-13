@@ -69,47 +69,7 @@ public class CL {
         }
     }
     
-    //------GRUPOS------
-    
-    public boolean registrarGrupos(Grupo pGrupo) {
-        boolean existe = false;
-       
-        if(!listaGrupos.contains(pGrupo)) {
-            listaGrupos.add(pGrupo);
-        } else {
-            existe = true;
-        }
-        return existe;
-    }
-    
-    public String[] listarGrupos() throws IOException {
-        int i = 0;
-        String [] listas = new String[listaGrupos.size()];
-        for(Grupo dato : listaGrupos) {
-            listas[i] = dato.toString();
-            i++;
-        }
-        return listas;
-    }
-    
-    public Grupo buscarGrupo(String pCodigo) {
-        Grupo encontrado = new Grupo();
-        for(Grupo dato : listaGrupos) {
-            if(dato.getCodigo().equals(pCodigo)) {
-                encontrado = dato;
-            }
-        }
-        return encontrado;
-    }
-    
-    public void elminarGrupo(String pCodigo) {
-        for(Grupo dato : listaGrupos) {
-            if(dato.getCodigo().equals(pCodigo)) {
-                listaGrupos.remove(dato);
-            }
-        }
-    }
-    
+
     //------MUNDIAL------
     
     public boolean registrarMundiales(Mundial pMundial) {
