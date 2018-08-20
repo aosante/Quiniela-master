@@ -13,7 +13,8 @@ public class GestorMundial extends Gestor {
     }
     
     public void registrarMundial(String paisSede, int anio) throws Exception{
-        (new MultiMundial()).registrarMundial(paisSede, anio);
+        Mundial mund = new Mundial(paisSede, anio);
+        (new MultiMundial()).registrarMundial(mund);
     }
     
     public ArrayList<String> listaPaises() throws Exception {

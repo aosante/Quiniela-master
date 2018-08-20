@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -100,7 +101,7 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <GridPane gridLinesVisible="true" layoutX="-1.0" layoutY="375.0" prefHeight="449.0" prefWidth="849.0">
+                  <GridPane layoutX="-1.0" layoutY="375.0" prefHeight="386.0" prefWidth="849.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -111,12 +112,126 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
+                     <children>
+                        <Label fx:id="lblGA" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font></Label>
+                        <Label fx:id="lblGB" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGC" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGE" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGF" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGG" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGD" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGH" alignment="CENTER" prefHeight="36.0" prefWidth="113.0" textAlignment="CENTER" textFill="#478771" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.halignment="CENTER">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <ListView fx:id="listB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <ListView fx:id="listC" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <ListView fx:id="listD" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <ListView fx:id="listE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <ListView fx:id="listF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <ListView fx:id="listG" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <ListView fx:id="listH" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="179.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets top="12.0" />
+                           </GridPane.margin>
+                        </ListView>
+                     </children>
                   </GridPane>
-                  <Label fx:id="aviso" layoutX="29.0" layoutY="327.0" minWidth="-Infinity" prefHeight="42.0" prefWidth="352.0" textFill="#478771">
+                  <Label fx:id="aviso" layoutX="29.0" layoutY="327.0" minWidth="-Infinity" prefHeight="42.0" prefWidth="604.0" textFill="#478771">
                      <font>
                         <Font name="Avenir Next Bold" size="16.0" />
                      </font>
                   </Label>
+                  <VBox alignment="TOP_CENTER" layoutX="520.0" layoutY="136.0" prefHeight="208.0" prefWidth="322.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="158.0" text="Equipos disponibles">
+                           <font>
+                              <Font name="Avenir Next Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="opcionEquipos" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets top="47.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#agregarEquipos" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Agregar" textFill="WHITE" translateY="60.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#limpiar" prefHeight="23.0" prefWidth="129.0" style="-fx-background-color: rgb(163, 70, 67);" text="Limpiar " textFill="WHITE" translateX="65.0" translateY="60.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button layoutX="681.0" layoutY="768.0" mnemonicParsing="false" onAction="#confirmar" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: rgb(71, 135, 113)rgb(71, 135, 113);" text="Confirmar" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
                </children></AnchorPane>
          </items>
       </SplitPane>
