@@ -1,11 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Esta clase se encarga de registrar, listar, eliminar y activar mundiales
  */
 package multis;
 
 import acceso.Conector;
+import cl.Mundial;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -18,9 +17,15 @@ import java.util.ArrayList;
  */
 public class MultiMundial {
     
-    public void registrarMundial(String paisSede, int anio) throws SQLException, Exception {
+    /**
+     * 
+     * @param mund mundial a registrar
+     * @throws SQLException excepcion si el query de SQL no se puede ejecutar
+     * @throws Exception excepcion 
+     */
+    public void registrarMundial(Mundial mund) throws SQLException, Exception {
         String sql;
-        sql = "INSERT INTO MUNDIAL (paisSede, anio) VALUES ( '" + paisSede + "', " + anio + ");";
+        sql = "INSERT INTO MUNDIAL (paisSede, anio) VALUES ( '" + mund.getPaisSede() + "', " + mund.getAnio() + ");";
         try {
             Conector.getConector().ejecutarSQL(sql);
         } catch(Exception e) {
@@ -28,7 +33,12 @@ public class MultiMundial {
         }
     }
     
-    //metodo que devuelva arraylist con los paises registrados para quitarlos del chociebox
+    /**
+     * 
+     * @return arraylist de string con los paises registrados
+     * @throws SQLException excepcion de SQL si no hay paises registrados
+     * @throws Exception excepcion 
+     */
     public ArrayList<String> listaPaises() throws SQLException, Exception {
         ArrayList<String> listaPaises = new ArrayList();
         String sql;
@@ -47,7 +57,12 @@ public class MultiMundial {
     }
     
     
-    //metodo que devuelva arraylist con los años registrados  para quitarlos del chociebox
+    /**
+     * 
+     * @return arraylist de enteros que lista todos los años de mundiales registrados 
+     * @throws SQLException excepcion de SQL si no hay ningun año de mundial registrado
+     * @throws Exception excepcion 
+     */
     public ArrayList<Integer> listaAnios() throws SQLException, Exception {
         ArrayList<Integer> listaAnios = new ArrayList();
         String sql;
@@ -66,7 +81,12 @@ public class MultiMundial {
     }
     
     
-    //metodo que devuelva concatenacion del año y pais (listarMundiales)
+    /**
+     * 
+     * @return arraylist de strings con los mundiales y años registrados
+     * @throws SQLException excepcion de SQL en caso de que no haya mundiales registrados
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listarMundiales() throws SQLException, Exception {
         ArrayList<String> listaMundiales = new ArrayList();
         String sql;
@@ -83,6 +103,12 @@ public class MultiMundial {
         return listaMundiales;
     }
     
+    /**
+     * 
+     * @param anio año del mundial
+     * @throws SQLException excepcion de SQL si no se pudo modificar el estado del mundial
+     * @throws Exception excepcion 
+     */
     public void activarMundial(String anio) throws SQLException, Exception {
         String sql1 = "UPDATE MUNDIAL SET estado = 'inactivo';";
         String sql2 = "UPDATE MUNDIAL SET estado = 'activo' "
@@ -95,6 +121,12 @@ public class MultiMundial {
         }
     }  
     
+    /**
+     * 
+     * @return string con el mundial activo en el momento
+     * @throws SQLException excepcion de SQL si no hay un mundial activo
+     * @throws Exception excepcion
+     */
     public String seleccionarMundialActivo() throws SQLException, Exception {
         String mundialActivo = "", sql;
         sql = "SELECT * FROM MUNDIAL WHERE estado = 'activo';";
@@ -109,7 +141,12 @@ public class MultiMundial {
         }
         return mundialActivo;
     }
-    
+    /**
+     * 
+     * @param anio año del mundial a eliminar
+     * @throws SQLException excepcion de SQL si el mundial no se pudo eliminar 
+     * @throws Exception excepcion 
+     */
     public void eliminarMundial(String anio) throws SQLException, Exception {
         String sql, sql2;
         sql = "DELETE FROM MUNDIAL WHERE anio = " + anio + ";";

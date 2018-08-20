@@ -69,6 +69,16 @@ public class Usuario {
         return avatar;
     }
 
+    public int getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "Usuario{" 
