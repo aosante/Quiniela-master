@@ -210,10 +210,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo A')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
@@ -231,10 +231,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo B')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
@@ -252,10 +252,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo C')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
@@ -263,7 +263,7 @@ public class MultiGrupo {
             lista.add(rs.getString("nombrePais") + " - " + "(" + rs.getString("codigoISO") + ")");
         }
     }catch(Exception e) {
-        throw new Exception("Erro al listar los equipos del grupo C");
+        throw new Exception("Error al listar los equipos del grupo C");
     }
         rs.close();
         return lista;
@@ -273,10 +273,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo D')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
@@ -294,10 +294,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo E')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
@@ -315,10 +315,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo F')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
@@ -336,10 +336,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo G')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
@@ -357,10 +357,10 @@ public class MultiGrupo {
         ArrayList<String> lista = new ArrayList();
         String sql;
         sql = "select nombrePais, codigoISO from EQUIPO\n" +
-"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')\n" +
-"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')\n" +
-"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')\n" +
-"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anioMundial from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')";
+"where nombrePais IN (SELECT equipo1 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')\n" +
+"OR nombrePais IN (SELECT equipo2 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')\n" +
+"OR nombrePais IN (SELECT equipo3 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')\n" +
+"OR nombrePais IN (SELECT equipo4 from GRUPO where anioMundial = (select anio from MUNDIAL where estado = 'activo') and nombre = 'Grupo H')";
         ResultSet rs = null;
         try{
         rs = Conector.getConector().ejecutarSQL(sql, true);
