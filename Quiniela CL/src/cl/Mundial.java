@@ -1,4 +1,6 @@
-
+/**
+ * Esta clase se encarga de instanciar a la clase mundial
+ */
 package cl;
 
 import java.time.LocalDate;

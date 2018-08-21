@@ -76,7 +76,12 @@ public class MultiGrupo {
             throw new Exception("No se pudo eliminar el grupo");
         }
     }
-    
+    /**
+     * 
+     * @param equipos a asociarle al grupo A
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion
+     */
     public void asociarGrupoA(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         System.out.println(equipos.get(0));
@@ -93,7 +98,12 @@ public class MultiGrupo {
             throw new Exception("Ocurrió un error al asociar los equipos del Grupo A");
         }
     }
-    
+    /**
+     * 
+     * @param equipos a asociarle al grupo B
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion
+     */
     public void asociarGrupoB(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         sql1 = "UPDATE GRUPO SET equipo1 = '" + equipos.get(0) + "' WHERE nombre = 'Grupo B' AND anioMundial=(SELECT anio FROM MUNDIAL WHERE estado = 'activo');";
@@ -110,6 +120,12 @@ public class MultiGrupo {
         }
     }
     
+    /**
+     * 
+     * @param equipos a asociarle al grupo C
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion
+     */
     public void asociarGrupoC(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         sql1 = "UPDATE GRUPO SET equipo1 = '" + equipos.get(0) + "' WHERE nombre = 'Grupo C' AND anioMundial=(SELECT anio FROM MUNDIAL WHERE estado = 'activo');";
@@ -126,6 +142,12 @@ public class MultiGrupo {
         }
     }
     
+    /**
+     * 
+     * @param equipos a asociarle al grupo D
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion 
+     */
     public void asociarGrupoD(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         sql1 = "UPDATE GRUPO SET equipo1 = '" + equipos.get(0) + "' WHERE nombre = 'Grupo D' AND anioMundial=(SELECT anio FROM MUNDIAL WHERE estado = 'activo');";
@@ -142,6 +164,12 @@ public class MultiGrupo {
         }
     }
     
+    /**
+     * 
+     * @param equipos a asociarle al grupo E
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion
+     */
     public void asociarGrupoE(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         sql1 = "UPDATE GRUPO SET equipo1 = '" + equipos.get(0) + "' WHERE nombre = 'Grupo E'  AND anioMundial=(SELECT anio FROM MUNDIAL WHERE estado = 'activo');";
@@ -158,6 +186,12 @@ public class MultiGrupo {
         }
     }
     
+    /**
+     * 
+     * @param equipos a asociarle al grupo F
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion
+     */
     public void asociarGrupoF(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         sql1 = "UPDATE GRUPO SET equipo1 = '" + equipos.get(0) + "' WHERE nombre = 'Grupo F' AND anioMundial=(SELECT anio FROM MUNDIAL WHERE estado = 'activo');";
@@ -174,6 +208,12 @@ public class MultiGrupo {
         }
     }
     
+    /**
+     * 
+     * @param equipos a asociarle al grupo G
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public void asociarGrupoG(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         sql1 = "UPDATE GRUPO SET equipo1 = '" + equipos.get(0) + "' WHERE nombre = 'Grupo G' AND anioMundial=(SELECT anio FROM MUNDIAL WHERE estado = 'activo');";
@@ -190,6 +230,12 @@ public class MultiGrupo {
         }
     }
     
+    /**
+     * 
+     * @param equipos a asociarle al grupo H
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion
+     */
     public void asociarGrupoH(ArrayList<String> equipos) throws SQLException, Exception {
         String sql1, sql2, sql3, sql4;
         sql1 = "UPDATE GRUPO SET equipo1 = '" + equipos.get(0) + "' WHERE nombre = 'Grupo H' AND anioMundial=(SELECT anio FROM MUNDIAL WHERE estado = 'activo');";
@@ -206,6 +252,12 @@ public class MultiGrupo {
         }
     }
     
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo A
+     * @throws SQLException excepcion de SQL
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposA() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;
@@ -226,7 +278,12 @@ public class MultiGrupo {
         rs.close();
         return lista;
     }
-    
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo B
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposB() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;
@@ -247,7 +304,12 @@ public class MultiGrupo {
         rs.close();
         return lista;
     }
-    
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo C
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposC() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;
@@ -268,7 +330,12 @@ public class MultiGrupo {
         rs.close();
         return lista;
     }
-    
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo D
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposD() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;
@@ -290,6 +357,12 @@ public class MultiGrupo {
         return lista;
     }
     
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo E
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposE() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;
@@ -311,6 +384,12 @@ public class MultiGrupo {
         return lista;
     }
     
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo F
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposF() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;
@@ -332,6 +411,12 @@ public class MultiGrupo {
         return lista;
     }
     
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo G
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposG() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;
@@ -353,6 +438,12 @@ public class MultiGrupo {
         return lista;
     }
     
+    /**
+     * 
+     * @return arraylist de strings con los equipos del grupo H
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion
+     */
     public ArrayList<String> listaEquiposH() throws SQLException, Exception {
         ArrayList<String> lista = new ArrayList();
         String sql;

@@ -1,4 +1,6 @@
-
+/**
+ * Esta clase se ecnarga de instanciar al objeto Equipo
+ */
 package cl;
 
 import javax.swing.ImageIcon;

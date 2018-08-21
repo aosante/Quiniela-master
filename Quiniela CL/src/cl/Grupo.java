@@ -1,4 +1,6 @@
-
+/**
+ * Esta clase se encarga de instanciar al objeto grupo
+ */
 package cl;
 
 import java.util.ArrayList;

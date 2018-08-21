@@ -35,18 +35,12 @@ public class GestorEquipo extends Gestor{
         return (new MultiEquipo()).listarEquipos();
     }
     
-    /**
-     * 
-     * @param pCodigoISO codigo ISO del país a buscar
-     * @return equipo encontrado
-     */
-    public Equipo buscarEquipo(String pCodigoISO) {
-        return logica.buscarEquipos(pCodigoISO);
-    }
+
     
     /**
      * 
-     * @param pCodigoISO codigo ISO del país a eliminar
+     * @param nombre del equipo a eliminar
+     * @throws Exception excepcion
      */
     public void eliminarEquipo(String nombre) throws Exception  {
        (new MultiEquipo()).eliminarEquipo(nombre);

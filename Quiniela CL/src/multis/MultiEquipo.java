@@ -16,7 +16,12 @@ import java.util.ArrayList;
  * @author andresosante
  */
 public class MultiEquipo {
-    
+    /**
+     * 
+     * @param team equipos a registrar
+     * @throws SQLException excepcion en caso de que sea repetido
+     * @throws Exception excepcion
+     */
     public void registrarEquipo(Equipo team) throws SQLException, Exception {
         String sql;
         sql = "INSERT INTO EQUIPO VALUES( '" + team.getNombrePais() + "', '" + team.getCodigoISO() + "', " + team.getRanking() + " );";
@@ -27,6 +32,12 @@ public class MultiEquipo {
         }
     }
     
+    /**
+     * 
+     * @return arraylist de string de equipos registrados
+     * @throws SQLException excepcion de SQL en caso de que no hayan equipos registrados
+     * @throws Exception excepcion 
+     */
     public ArrayList<String> listarEquipos() throws SQLException, Exception {
         ArrayList<String> listaEquipos = new ArrayList();
         String sql;
@@ -43,7 +54,12 @@ public class MultiEquipo {
         rs.close();
         return listaEquipos;
     }
-    
+    /**
+     * 
+     * @param nombre del equipo a eliminar
+     * @throws SQLException excepcion de sql
+     * @throws Exception excepcion 
+     */
     public void eliminarEquipo(String nombre) throws SQLException, Exception {
         String sql;
         sql = "DELETE FROM EQUIPO WHERE nombrePais = '" + nombre + "';";

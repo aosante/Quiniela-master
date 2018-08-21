@@ -1,4 +1,6 @@
-
+/**
+ * Esta clase se encarga de instanciar a los objeto de tipo usuario
+ */
 package cl;
 
 import java.util.Objects;
